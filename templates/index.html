@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Virtua-Travel</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+				<img src="{% static 'logo.jpg' %}">
+				
+			</div>
+			<ul>
+				<li class="active"><a href="#">Home</a> </li>
+				<li><a href="#">About</a> </li>
+
+				{% if user.is_authenticated %}
+				<li><a>Hello, {{user.first_name}}</a></li>
+				<li><a href="logout.html">Log Out</a> </li>
+				{% else %}
+				<li><a href="register.html">Book A Tour</a> </li>
+				<li><a href="login.html">Log In</a> </li>
+				
+				{% endif %}
+				<li><a href="destinations.html">Destinations</a> </li>
+			</ul>
+		</div>
+		<div class="title">
+			<h1>VIRTUA-TRAVEL</h1>
+			<p>Amidst the Pandemic explore the World from the comfort of your home!</p>
+		</div>
+		<div class="button">
+			<a href="https://www.youtube.com/watch?v=Kqn8em5vr30" target="_blank" class="btn">WATCH DEMO</a>
+			<a href="#" class="btn">LEARN MORE</a>
+
+		</div>
+	</header>
+
+</body>
+</html>

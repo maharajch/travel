@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinations</title>
+
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+  </head>
+
+  <body>
+    
+    <div class="grid">
+
+
+      <!-- DESTINATIONS -->
+    
+    {% for dest in dests %}
+
+      <div class="grid-item">
+      
+        <div class="card">
+          <img class="card-img" src="{{dest.img.url}}" alt="Kolkata" />
+          <div class="card-content">
+            <h1 class="card-header">{{dest.name}}</h1>
+            <p class="card-text">
+              {{dest.name}} is known as <strong> {{dest.desc}}</strong>.<br>
+              Prices Start from Rs.{{dest.price}}
+            </p>
+            <button class="card-btn" ><a  href="login.html">Visit</a> <span>&rarr;</span></button>
+          </div>
+        </div>
+       
+      </div>
+    {% endfor %}
+
+    </div>
+
+  </body>
+</html>

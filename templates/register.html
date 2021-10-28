@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Restration For New Tour</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" >
+</head>
+
+<body>
+	<header>
+		<div class="login-form">
+			<h1> Register </h1>
+			<form action="register.html" method="POST">
+                {% csrf_token %}
+				<p>First Name</p>
+				<input type="text" name="first_name" placeholder="First Name">
+                <p>Last Name</p>
+                <input type="text" name="last_name" placeholder="Last Name">
+                <p>Username</p>
+                <input type="text" name="username" placeholder="Username">
+                <p>E-mail ID</p>
+                <input type="email" name="email" placeholder="E-mail ID">
+				<p>Password</p>
+				<input type="password" name="password" placeholder="Password">
+                <p>Confirm Password</p>
+				<input type="password" name="confirm_password" placeholder="Confirm Password">
+				<button type="submit"> REGISTER </button>
+
+			
+			</form>
+
+            {% for message in messages %}
+            <h4> {{message}} </h4>
+            {% endfor %}
+		</div>
+       
+	</header>
+
+</body>
+</html>
