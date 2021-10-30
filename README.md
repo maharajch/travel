@@ -20,7 +20,7 @@
 ![alt text](ss4.jpg)
 
 - Destinations Added By Admin
-![alt text](dest1.jpg)
+![alt text](screenshots/dest1.jpg)
 ![alt text](dest2.jpg)
 ![alt text](dest3.jpg)
 
