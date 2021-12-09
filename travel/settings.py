@@ -29,7 +29,7 @@ SECRET_KEY = '=whn5bfrbe20+*o#!&x27tl15)pl*zjowd+-do#j5$_jcf_qhv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['virtua-travel.herokuapp.com/']
+ALLOWED_HOSTS = ['virtua-travel.herokuapp.com']
 
 
 # Application definition
